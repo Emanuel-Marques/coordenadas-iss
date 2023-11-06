@@ -14,7 +14,7 @@ function App() {
     async function fetchData() {
       const data = await fetchCoordinates();
       setCoordinates({ latitude: data.latitude, longitude: data.longitude });
-      setLoading(true);
+      setLoading(false);
     }
     fetchData();
   },[]);
@@ -22,7 +22,7 @@ function App() {
   if(loading) {
     return <h1>Loading...</h1>
   }
-  
+
   return (
     <>
     <h1>International Space Station Location Tracker</h1>
